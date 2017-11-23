@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta charset="UTF-8"> 
+		<title>Guía JavaScript</title>
+	</head>
+
+	<body>
+		<h1> Guía JavaScript + JSON + Inspector </h1>
+		<p> Esta es una guía para facilitar el conocimiento acerca del lenguaje de JavaScript y cómo podemos utilizar JSON y mapearlo de forma nativa con la instrucción JSON.parse, finalmente se detallará el uso del inspector y todas sus funcionalidades.</p>
+		<br>
+
+		<section id="section_one">
+			<ul id="lista" name="lista" class="lista"> Sintáxis Básica: 
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(0, this);">Declaración de Variables </a></li>
+					<img class="imagen_seccion" src="img/declaracion.png" alt="declaracion" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(1, this);">Declaración de funciones (generales) </a></li>
+					<img class="imagen_seccion" src="img/funcion_general.png" alt="funcion_general" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(2, this);">Función recursiva </a></li>
+					<img class="imagen_seccion" src="img/funcion_recursiva.png" alt="funcion_recursiva" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(3, this);">Función anónima </a></li>
+					<img class="imagen_seccion" src="img/funcion_anonima.png" alt="funcion_anonima" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(4, this);">Objeto (forma literal) </a></li>
+					<img class="imagen_seccion" src="img/objeto_literal.png" alt="objeto_literal" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(5, this);">Objeto (forma dinámica) </a></li>
+					<img class="imagen_seccion" src="img/objeto_dinamico.png" alt="objeto_dinamico" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(6, this);">Herencia (prototipo) </a></li>
+					<img class="imagen_seccion" src="img/herencia.png" alt="herencia" hidden>
+				</div>
+			</ul>
+			<button class="boton" id="sintaxis_javascript" type="button" onclick="mostrar_todos(this);">Atrás</button>
+			<button class="boton" id="dom_javascript" type="button">Métodos DOM y JavaScript</button>
+		</section>
+ 
+		<section id="section_two" hidden>
+			<ul id="lista_2" name="lista_2" class="lista"> JavaScript y el DOM HTML: 
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(0, this);">Get Element By Id </a></li>
+					<img class="imagen_seccion" src="img/getElementById.png" alt="getElementById" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(1, this);">Get Element By Class Name </a></li>
+					<img class="imagen_seccion" src="img/getElementByClassName.png" alt="getElementByClassName" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(2, this);">Get Elements By Name </a></li>
+					<img class="imagen_seccion" src="img/getElementsByName.png" alt="getElementsByName" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(3, this);">Get Elements By Tag Name </a></li>
+					<img class="imagen_seccion" src="img/getElementsByTagName.png" alt="getElementsByTagName" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(4, this);">Inner HTML </a></li>
+					<img class="imagen_seccion" src="img/innerHTML.png" alt="innerHTML" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(5, this);">Style Property </a></li>
+					<img class="imagen_seccion" src="img/styleProperty.png" alt="styleProperty" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(6, this);">Attribute </a></li>
+					<img class="imagen_seccion" src="img/attribute.png" alt="attribute" hidden>
+				</div>
+			</ul>
+			<button class="boton" type="button" onclick="mostrar_todos(this);">Atrás</button>
+			<button class="boton" id="eventos_javascript" type="button">Eventos DOM y JavaScript</button>
+		</section> 
+
+		<section id="section_three" hidden>
+			<ul id="lista_3" name="lista_3" class="lista"> Eventos DOM HTML: 
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(0, this);">Nivel 0 </a></li>
+					<img class="imagen_seccion" src="img/nivel_0.png" alt="nivel_0" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(1, this);">Nivel 1 </a></li>
+					<img class="imagen_seccion" src="img/nivel_1.png" alt="nivel_1" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(2, this);">Nivel 2 </a></li>
+					<img class="imagen_seccion" src="img/nivel_2.png" alt="nivel_2" hidden>
+				</div>
+			</ul>
+			<button class="boton" id="boton_atras" type="button" onclick="mostrar_todos(this);">Atrás</button>
+			<button class="boton" id="inclusion_javascript" type="button">Inclusión de JavaScript</button>
+		</section>
+
+		<section id="section_four" hidden>
+			<ul id="lista_4" name="lista_4" class="lista"> Inclusión de JavaScript en un documento HTML: 
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(0, this);">Archivo Externo </a></li>
+					<img class="imagen_seccion" src="img/codigo_archivo_externo.png" alt="codigo_archivo_externo" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(1, this);">Código explícito dentro del HTML </a></li>
+					<img class="imagen_seccion" src="img/codigo_explicito.png" alt="codigo_explicito" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(2, this);">Código en un Event Handler de Nivel 0 </a></li>
+					<img class="imagen_seccion" src="img/codigo_event_handler.png" alt="codigo_event_handler" hidden>
+				</div>
+			</ul>
+			<button class="boton" id="boton_atras" type="button" onclick="mostrar_todos(this);">Atrás</button>
+			<button class="boton" id="json_javascript" type="button">JSON y JavaScript</button>
+		</section>
+		
+		<section id="section_five" hidden>
+			<ul id="lista_5" name="lista_5" class="lista"> JSON: 
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(0, this);">JSON </a></li>
+					<img class="imagen_seccion" src="img/json.png" alt="json" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(1, this);">JSON PARSE </a></li>
+					<img class="imagen_seccion" src="img/json_parse.png" alt="json_parse" hidden>
+				</div>
+				
+				<div class="div_seccion">
+					<li><a href="#" onclick="mostrar_ocultar(2, this);">Recorriendo JSON </a></li>
+					<img class="imagen_seccion" src="img/json_corrida.png" alt="json_corrida" hidden>
+				</div>
+			</ul>
+			<button class="boton" id="boton_atras" type="button" onclick="mostrar_todos(this);">Atrás</button>
+			<button class="boton" id="operar_json" type="button">Operaciones de JSON con JavaScript</button>
+		</section>
+		<br>
+		
+		<script type="text/javascript" src="js/script.js">	</script>
+	</body>
+</html>
